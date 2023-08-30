@@ -1,7 +1,7 @@
 from random_word import RandomWords
 
 while True:
-    palavra = 
+    palavra = RandomWords.get_random_word()
 
     if (len(palavra)) == 8:
         print(palavra)
