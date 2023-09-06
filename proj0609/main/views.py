@@ -7,3 +7,6 @@ def index(request):
 
 def hello_world(request):
     return HttpResponse("Olá mundo")
+
+def bia(request):
+    return HttpResponse("Bia Linda")
