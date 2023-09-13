@@ -17,3 +17,19 @@ def ex002(request):
         'meu_booleano': True
     }
     return render(request, 'angeline/ex002.html', context)
+
+def contato(request):
+   ip_address = request.META.get('REMOTE_ADDR')
+
+   if request.method == 'POST':
+        metodo = "*post*"
+   else:
+        metodo = "*get*"
+
+   context = { 
+        'titulo' : 'historia do passos',
+        'passo' : 'passo 1',
+        'metodo' : metodo,
+        'ip_address' : ip_address
+    }
+   return render(request, 'angeline/contato.html', context)
