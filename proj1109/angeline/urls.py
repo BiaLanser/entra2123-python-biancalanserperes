@@ -5,8 +5,8 @@ from angeline.views import index, ex002, contato
 app_name = "angeline"
 
 urlpatterns = [
-    path('', index, name='index'),
-    path('ex002', ex002, name='ex002'),
+    path('helloworld', index, name='index'),
+    path('', ex002, name='ex002'),
     path('contato', contato, name='contato'),
 
 ]
