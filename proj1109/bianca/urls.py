@@ -1,5 +1,5 @@
 from django.urls import path
-from bianca.views import index, ex001
+from bianca.views import index, ex001, qualquer
 
 app_name = "bianca"
 
