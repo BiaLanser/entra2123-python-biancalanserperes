@@ -35,8 +35,14 @@ def ex001(request):
             posicao_fim = int(form.cleaned_data['posicao_fim'])
             passo = qualquer4(texto, posicao_inicio, posicao_fim)
     else:
-        metodo = "*GET*"
-        form = Ex001Form()
+        metodo = "*GET*"      
+        initial_data = {
+            'texto': 'texto padrão',
+            'posicao_inicio': 1,
+            'posicao_fim': 2,
+            'passo': 'teste',
+        }
+        form = Ex001Form(initial=initial_data)
 
 
     context = { 
