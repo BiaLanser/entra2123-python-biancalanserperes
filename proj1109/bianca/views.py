@@ -81,6 +81,54 @@ def ex003(request):
 
     return render(request, 'bianca/ex003.html', context)
 
+
+def ex004(request):
+    meu_dicionario= {
+	    '1' : { 
+		    'Pergunta' : 'Qual a capital da França?',
+			'A' : 'Blumenau',
+			'B' : 'Brusque',
+		    'C' : 'Floripa',
+			'D' : 'Paris',
+			'Resposta' : 'D'
+		} ,
+        '2': {
+            'Pergunta': 'Qual é o maior rio do mundo?',
+            'A': 'Rio Nilo',
+            'B': 'Rio Amazonas',
+            'C': 'Rio Yangtzé',
+            'D': 'Rio Mississippi',
+            'Resposta': 'B'
+        },
+        '3': {
+            'Pergunta': 'Quem escreveu a peça "Hamlet"?',
+            'A': 'William Wordsworth',
+            'B': 'William Shakespeare',
+            'C': 'Charles Dickens',
+            'D': 'George Orwell',
+            'Resposta': 'B'
+        },
+        '4': {
+            'Pergunta': 'Qual é o maior deserto do mundo?',
+            'A': 'Deserto do Atacama',
+            'B': 'Deserto de Gobi',
+            'C': 'Deserto do Saara',
+            'D': 'Deserto do Kalahari',
+            'Resposta': 'C'
+        },
+        '5': {
+            'Pergunta': 'Quem foi o primeiro homem a pisar na Lua?',
+            'A': 'Neil Armstrong',
+            'B': 'Buzz Aldrin',
+            'C': 'Yuri Gagarin',
+            'D': 'Alan Shepard',
+            'Resposta': 'A'
+        }
+
+    }
+    print(meu_dicionario)
+    
+
     
     
     
