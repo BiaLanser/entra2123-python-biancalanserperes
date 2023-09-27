@@ -138,6 +138,7 @@ def ex004(request):
     
     context = { 
         'meu_dicionario': meu_dicionario,
+        'teste': len(meu_dicionario)
     }
 
     return render(request, 'bianca/ex004.html', context)
