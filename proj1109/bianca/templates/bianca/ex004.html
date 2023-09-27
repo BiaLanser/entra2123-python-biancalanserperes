@@ -1,14 +1,20 @@
-{% extends "angeline/base.html" %}
 
-{% block content %}
-<h2>Formulário Exercícios 004</h2>
+<!-- template.html -->
+<h2>Dicionário Exercício 004 </h2>
 
-Resultado: {{meu_dicionario}}
+{% for key, value in meu_dicionario.items %}
+    <h3>{{ key }}</h3>
+    <p>
+        <strong>Pergunta:</strong> {{ value.Pergunta }}
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Enviar</button>
-</form>
+        <strong>A:</strong> {{ value.A }}
 
-{% endblock %}
+        <strong>B:</strong> {{ value.B }}
+
+        <strong>C:</strong> {{ value.C }}
+
+        <strong>D:</strong> {{ value.D }}
+
+        <strong>Resposta:</strong> {{ value.Resposta }}
+    </p>
+{% endfor %}
