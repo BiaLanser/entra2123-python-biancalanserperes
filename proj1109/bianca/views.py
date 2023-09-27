@@ -136,9 +136,11 @@ def ex004(request):
         print(f"D) {pergunta['D']}")
         print('-' * 40)
     
+
+    print(len(meu_dicionario))
     context = { 
         'meu_dicionario': meu_dicionario,
-        'teste': len(meu_dicionario)
+        'teste': len(meu_dicionario),
     }
 
     return render(request, 'bianca/ex004.html', context)
