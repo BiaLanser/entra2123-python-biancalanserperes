@@ -127,7 +127,20 @@ def ex004(request):
 
     }
     print(meu_dicionario)
+    print("X"*40)
+    for chave, pergunta in sorted(meu_dicionario.items()):
+        print(f"Pergunta {chave}: {pergunta['Pergunta']}")
+        print(f"A) {pergunta['A']}")
+        print(f"B) {pergunta['B']}")
+        print(f"C) {pergunta['C']}")
+        print(f"D) {pergunta['D']}")
+        print('-' * 40)
     
+    context = { 
+        'meu_dicionario': meu_dicionario,
+    }
+
+    return render(request, 'bianca/ex004.html', context)
 
     
     
