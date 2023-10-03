@@ -1,7 +1,7 @@
-import datetime
+from datetime import datetime
 
-def cal_dias(data):
-    delta = datetime.now() - data
+def cal_dias(x):
+    delta = datetime.now() - x
     return delta.days
 
 dados_produtos = {
@@ -12,7 +12,7 @@ dados_produtos = {
      "id_est":301,
      "id_loc": 401,
      "validade": datetime(2023, 5, 6),
-     "dias_vencido":cal_dias(2023, 5, 6)
+     "dias_vencido":cal_dias(datetime(2023, 5, 6))
      },
 
  2: {
@@ -22,7 +22,7 @@ dados_produtos = {
      "id_est":302,
      "id_loc": 402,
      "validade": datetime(2023, 1, 24),
-     "dias_vencido":cal_dias(2023, 1, 24)
+     "dias_vencido":cal_dias(datetime(2023, 1, 24))
      },
 
  3: {
@@ -32,7 +32,7 @@ dados_produtos = {
      "id_est":303,
      "id_loc": 403,
      "validade": datetime(2020, 10, 20),
-     "dias_vencido":cal_dias(2020, 10, 20)
+     "dias_vencido":cal_dias(datetime(2020, 10, 20))
      },
 
  4: {
@@ -42,7 +42,7 @@ dados_produtos = {
      "id_est":304,
      "id_loc": 404,
      "validade": datetime(2023, 12, 22),
-     "dias_vencido":cal_dias(2023, 12, 22)
+     "dias_vencido":cal_dias(datetime(2023, 12, 22))
      },
 
  5: {
@@ -52,7 +52,7 @@ dados_produtos = {
      "id_est":305,
      "id_loc": 405,
      "validade": datetime(2023, 6, 8),
-     "dias_vencido":cal_dias(2023, 6, 8)
+     "dias_vencido":cal_dias(datetime(2023, 6, 8))
      },
 
  6: {
@@ -62,7 +62,7 @@ dados_produtos = {
      "id_est":306,
      "id_loc": 401,
      "validade": datetime(2023, 7, 2),
-     "dias_vencido":cal_dias(2023, 7, 2)
+     "dias_vencido":cal_dias(datetime(2023, 7, 2))
      },
 
  7: {
@@ -72,7 +72,7 @@ dados_produtos = {
      "id_est":307,
      "id_loc": 402,
      "validade": datetime(2023, 11, 2),
-     "dias_vencido":cal_dias(2023, 11, 2)
+     "dias_vencido":cal_dias(datetime(2023, 11, 2))
      },
 
  8: {
@@ -82,7 +82,7 @@ dados_produtos = {
      "id_est":308,
      "id_loc": 403,
      "validade": datetime(2022, 10, 3),
-     "dias_vencido":cal_dias(2022, 10, 3)
+     "dias_vencido":cal_dias(datetime(2022, 10, 3))
      },
 
  9: {
@@ -92,7 +92,7 @@ dados_produtos = {
      "id_est":309,
      "id_loc": 404,
      "validade": datetime(2023, 10, 19),
-     "dias_vencido":cal_dias(2023, 10, 19)
+     "dias_vencido":cal_dias(datetime(2023, 10, 19))
      },
 
  10: {
@@ -102,7 +102,7 @@ dados_produtos = {
      "id_est":310,
      "id_loc": 401,
      "validade": datetime(2023, 10, 4),
-     "dias_vencido":cal_dias(2023, 10, 2)
+     "dias_vencido":cal_dias(datetime(2023, 10, 4))
      },
 }
 
