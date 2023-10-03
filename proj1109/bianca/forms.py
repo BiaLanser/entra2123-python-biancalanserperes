@@ -16,4 +16,7 @@ class Ex003Form(forms.Form):
     pergunta = forms.CharField(disabled=True, label="Pergunta")
     resposta = forms.ChoiceField(choices=PERGUNTA_CHOICES, label="Resposta")
 
-
+# class Ex006Form(form):
+# 	id =
+#     nome =
+#     qtd =

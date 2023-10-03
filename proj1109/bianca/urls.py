@@ -9,4 +9,7 @@ urlpatterns = [
     path('ex003', ex003, name='ex003'),
     path('ex004', ex004, name='ex004'),
     path('ex005', ex005, name='ex005'),
+    path('ex006c', ex006c, name='ex006c'),
+    path('ex006r', ex006r, name='ex006r'),
+    path('ex006d', ex006d, name='ex006d'),
 ]

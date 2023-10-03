@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import Ex001Form, Ex003Form
 import ast
 from .dicionarios import *
+from .compras import *
 
 def index(request):
    return render(request, 'bianca/index.html')
@@ -187,5 +188,25 @@ def ex005(request):
     return render(request, 'bianca/ex005.html', context)
     
     
+def ex006c(request):
+	return
+
+def ex006r(request):
+    lista_compras = {}
     
+    for i, j in compras.items():
+        nome = j["nome"]
+        quantidade = j["quantidade"]
+
+        lista_compras[i] = {
+            "nome": nome,
+            "quantidade": quantidade,
+        }
+    context = {
+        "lista_compras": lista_compras,
+ }
+    return render(request, 'bianca/ex006r.html', context)
+
+def ex006d(request):
+		return 
 
