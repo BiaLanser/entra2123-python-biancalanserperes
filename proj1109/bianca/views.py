@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import Ex001Form, Ex003Form
 import ast
+from .dicionarios import *
 
 def index(request):
    return render(request, 'bianca/index.html')
@@ -145,6 +146,45 @@ def ex004(request):
 
     return render(request, 'bianca/ex004.html', context)
 
+    
+def ex005(request):
+    produto_info = {}
+    soma = 0
+ 
+    for produto_id, info in dados_produtos.items():
+        nome_produto = info['nome']
+        id_fornecedor = info["id_for"]
+        id_categoria = info["id_cat"]
+        id_estoque = info["id_est"]
+        id_localização = info["id_loc"]
+        validade = info["validade"]
+        dias_vencido = info["dias_vencido"]
+ 
+        nome_fornecedor = dados_fornecedores.get(id_fornecedor, "Fornecedor não encontrado")
+        nome_categoria = dados_categorias.get(id_categoria, "Categoria não encontrada")
+        quant_estoque = dados_estoque.get(id_estoque, "Estoque não encontrado")
+        localizacao = dados_localizacao.get(id_localização, "Local não encontrado")
+
+        soma = (soma + dias_vencido)
+ 
+        produto_info[produto_id] = {
+            "nome": nome_produto,
+            "fornecedor": nome_fornecedor,
+            "categoria": nome_categoria,
+            "estoque": quant_estoque,
+            "localizacao": localizacao,
+            "validade": validade,
+            "dias_vencido": dias_vencido
+        }
+
+    context = {
+        "produtos_info": produto_info,
+        "media": soma / len(dados_produtos)
+ 
+ }
+
+    print(produto_info) 
+    return render(request, 'bianca/ex005.html', context)
     
     
     

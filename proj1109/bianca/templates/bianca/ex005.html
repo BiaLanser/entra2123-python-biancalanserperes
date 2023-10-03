@@ -1,0 +1,53 @@
+{% extends "angeline/base.html" %}
+{% block content %}
+
+<style>
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    }
+   
+    th, td {
+    padding: 8px; 
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    }
+   
+    
+    th {
+    background-color: #706c6c;
+    }
+   
+    
+    </style>
+
+ <h2>Tabela de Produtos</h2>
+
+ <table>
+ <thead>
+ <tr>
+ <th>ID</th>
+ <th>Nome do Produto</th>
+ <th>Fornecedor</th>
+ <th>Categoria</th>
+ <th>Estoque</th>
+ <th>Validade</th>
+ <th>Dias para vencer</th>
+ </tr>
+ </thead>
+ <tbody>
+ {% for key, value in produtos_info.items %}
+ <tr>
+ <td>{{ key }}</td>
+ <td>{{ value.nome }}</td>
+ <td>{{ value.fornecedor }}</td>
+ <td>{{ value.categoria }}</td>
+ <td>{{ value.estoque }}</td>
+ <td>{{ value.validade}}</td>
+ <td>{{ value.dias_vencido }}</td>
+
+ </tr>
+ {% endfor %}
+ </tbody>
+ </table>
+{% endblock %}
