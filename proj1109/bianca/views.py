@@ -189,7 +189,23 @@ def ex005(request):
     
     
 def ex006c(request):
-	return
+	if request.method == 'POST':
+        form = Ex007Form(request.POST)
+        if form.is_valid():
+            nome_produto = form.cleaned_data['nome']
+            qnt_produto = form.cleaned_data['qtde']
+
+            proximo_id = str(len(compras) + 1)                                  
+
+            compras[proximo_id] = {'nome': nome_produto, 'qnt': qnt_produto}    
+
+            return redirect('robertinha:ex007')                                
+    
+    else:
+        proximo_id = str(len(compras) + 1)
+        form = Ex007Form(initial={'id_produto': proximo_id})                    
+
+    return render(request, 'robertinha/ex007_add.html', {'form': form})
 
 def ex006r(request):
     lista_compras = {}
@@ -207,6 +223,9 @@ def ex006r(request):
  }
     return render(request, 'bianca/ex006r.html', context)
 
-def ex006d(request):
-		return 
+def ex006d(request, id):
+    if request.method == 'POST':
+        if id_produto in compras:                                               
+            del compras[id_produto]                                             
+    return redirect('robertinha:ex007')
 
