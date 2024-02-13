@@ -6,6 +6,7 @@ Nesse repósitório foram armazenados as atividades que fizemos durante o curso 
 
 * Python
 * Django
+* HTML
 * Git
 * VS Code
 
