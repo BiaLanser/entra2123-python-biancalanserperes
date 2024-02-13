@@ -5,7 +5,7 @@ Nesse repósitório foram armazenados as atividades que fizemos durante o curso 
 ## 📋 Ferramentas
 
 * Python
-* Djangp
+* Django
 * Git
 * VS Code
 
